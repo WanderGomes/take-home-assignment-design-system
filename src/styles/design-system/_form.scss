@@ -1,0 +1,150 @@
+.tk-form {
+
+    &__group {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+    }
+
+    &__input-group {
+        display: flex;
+        height: var(--tk-input-height);
+        background: var(--tk-input-group-background-color);
+        flex-direction: row;
+        align-items: center;
+        border: solid 1px var(--tk-input-default-border-color);
+        margin-top: var(--tk-half-space);
+        @include border-radius(var(--tk-half-space));
+
+        &:focus, &:focus-within {
+            border-color: var(--tk-input-focus-border-color);
+            @include transition("border-color", 0.16s, "ease-in-out");
+
+            i {
+                color: var(--tk-input-focus-border-color);
+                @include transition("color", 0.16s, "ease-in-out");
+
+                &::before {
+                    color: var(--tk-input-focus-border-color);
+                    @include transition("color", 0.16s, "ease-in-out");
+                }
+            }
+        }
+
+        &:hover {
+            background: var(--tk-input-hover-background-color);
+        }
+
+        .tk-form__input {
+            height: 100%;
+            flex: 1;
+            border: none;
+        }
+    }
+
+    %input-icon {
+        color: var(--tk-input-icon-color);
+        font-size: var(--tk-input-icon-font-size);
+    }
+
+    %input-prepend-append {
+        display: flex;
+        height: 100%;
+        width: var(--tk-space-7x);
+        padding: 0;
+        background: var(--tk-input-prepend-append-background-color);
+        justify-content: center;
+        align-items: center;
+        @extend %input-icon;
+
+        i, i::before {
+            @extend %input-icon;
+        }
+    }
+
+    &__input-prepend {
+        @extend %input-prepend-append;
+        border-right: solid 1px var(--tk-input-prepend-append-border-color);
+        @include border-top-left-radius(var(--tk-half-space));
+        @include border-bottom-left-radius(var(--tk-half-space));
+
+        + .tk-form__input {
+            @include border-top-left-radius(0);
+            @include border-bottom-left-radius(0);
+            @include border-top-right-radius(3px);
+            @include border-bottom-right-radius(3px);
+        }
+    }
+
+    &__input-append {
+        @extend %input-prepend-append;
+        border-left: solid 1px var(--tk-input-prepend-append-border-color);
+        @include border-top-right-radius(var(--tk-half-space));
+        @include border-bottom-right-radius(var(--tk-half-space));
+    }
+
+    &__input {
+        height: var(--tk-input-height);
+        width: 100%;
+        padding: var(--tk-default-space) var(--tk-space-2x);
+        color: var(--tk-input-default-color);
+        background: var(--tk-input-default-background);
+        font-size: var(--tk-big-font-size);
+        font-weight: 600;
+        border: 1px solid;
+        border-color: var(--tk-input-default-border-color);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        outline: none;
+        @include border-radius(var(--tk-half-space));
+
+        &:hover {
+            color: var(--tk-input-hover-text-color);
+            background: var(--tk-input-hover-background-color);
+        }
+
+        &:focus {
+            border-color: var(--tk-input-focus-border-color);
+            @include transition("border-color", 0.16s, "ease-in-out");
+        }
+    }
+
+    .tk-row + .tk-row {
+        margin-top: var(--tk-half-space);
+    }
+
+    label {
+        color: var(--tk-text-color);
+        font-weight: 500;
+    }
+
+    label + input,
+    label + .tk-form__group {
+        margin-top: var(--tk-default-space);
+    }
+}
+
+%placeholder {
+    color: var(--tk-placeholder-color);
+    font-weight: 500;
+}
+
+::-webkit-input-placeholder {
+    @extend %placeholder;
+}
+
+::-moz-placeholder {
+    @extend %placeholder;
+}
+
+::-ms-input-placeholder {
+    @extend %placeholder;
+}
+
+::placeholder {
+    @extend %placeholder;
+}
+
+:-moz-placeholder {
+    @extend %placeholder;
+}

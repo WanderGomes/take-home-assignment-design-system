@@ -1,0 +1,97 @@
+.tk-card {
+    width: 100%;
+    background: var(--tk-card-background);
+    border: 1px solid var(--tk-card-border-color);
+    @include border-radius(var(--tk-default-space));
+    @include box-shadow(0px, 1px, var(--tk-half-space), 0px, var(--tk-card-box-shadow));
+
+    &__header {
+        padding: var(--tk-space-5x) var(--tk-space-5x) calc(var(--tk-space-5x) / 2) var(--tk-space-5x);
+        @include border-top-left-radius(var(--tk-default-space));
+        @include border-top-right-radius(var(--tk-default-space));
+
+        & + .tk-card__body {
+            @include border-radius(0);
+        }
+    }
+
+    &__body {
+        padding: calc(var(--tk-space-5x) / 2) var(--tk-space-5x) calc(var(--tk-space-5x) / 2) var(--tk-space-5x);
+        @include border-radius(var(--tk-default-space));
+    }
+
+    &__footer {
+        padding: calc(var(--tk-space-5x) / 2) var(--tk-space-5x) var(--tk-space-5x) var(--tk-space-5x);
+        background: var(--tk-card-footer-background-color);
+        @include border-bottom-left-radius(var(--tk-default-space));
+        @include border-bottom-right-radius(var(--tk-default-space));
+
+        &--transparent {
+            background: transparent;
+        }
+    }
+
+    &--small {
+        @include border-radius(var(--tk-half-space));
+
+        .tk-card {
+
+            &__header {
+                padding: var(--tk-space-2x) var(--tk-space-4x);
+                @include border-top-left-radius(var(--tk-half-space));
+                @include border-top-right-radius(var(--tk-half-space));
+
+                & + .tk-card__body {
+                    @include border-radius(0);
+                }
+            }
+
+            &__body {
+                padding: calc(var(--tk-space-5x) - 4px) var(--tk-space-4x);
+                @include border-radius(var(--tk-half-space));
+            }
+
+            &__footer {
+                padding: var(--tk-space-2x) var(--tk-space-4x);
+                @include border-bottom-left-radius(var(--tk-half-space));
+                @include border-bottom-right-radius(var(--tk-half-space));
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+
+    .tk-card {
+
+        &__header {
+            padding: calc(var(--tk-space-3x) + var(--tk-half-space)) var(--tk-space-2x) calc(var(--tk-space-5x) / 2) var(--tk-space-2x);
+        }
+
+        &__body {
+            padding: calc(var(--tk-space-5x) / 2) var(--tk-space-2x) calc(var(--tk-space-5x) / 2) var(--tk-space-2x);
+        }
+
+        &__footer {
+            padding: calc(var(--tk-space-5x) / 2) var(--tk-space-2x) var(--tk-space-5x) var(--tk-space-2x);
+        }
+
+        &--small {
+
+            .tk-card {
+
+                &__header {
+                    padding: calc(var(--tk-space-2x) + var(--tk-half-space)) var(--tk-space-3x);
+                }
+
+                &__body {
+                    padding: calc(var(--tk-space-2x) + var(--tk-half-space)) var(--tk-space-3x);
+                }
+
+                &__footer {
+                    padding: calc(var(--tk-space-2x) + var(--tk-half-space)) var(--tk-space-3x);
+                }
+            }
+        }
+    }
+}

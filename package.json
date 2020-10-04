@@ -1,0 +1,70 @@
+{
+  "name": "take-home-assignment-design-system",
+  "version": "1.0.0",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "start": "npm run build && npm run docker:stop && npm run docker:build && npm run docker:start",
+    "serve": "webpack-dev-server --config configs/webpack.server.config.js --env.mode development --open",
+    "build": "npm run clean:themes && npm run build:light && npm run build:dark && npm run build:design-system && npm run copy:htaccess",
+    "build:design-system": "webpack --config configs/webpack.design-system.config.js",
+    "build:light": "npm run theme light",
+    "build:dark": "npm run theme dark",
+    "theme": "node tasks/build-theme.js",
+    "clean:themes": "rimraf dist/themes",
+    "clean:js": "rimraf dist/themes.js && rimraf dist/design-system.js",
+    "docker:stop": "docker-compose down",
+    "docker:start": "docker-compose up -d",
+    "docker:build": "docker-compose build",
+    "copy:htaccess": "copyfiles -f -a httpd-config/.htaccess dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WanderGomes/take-home-assignment-design-system.git"
+  },
+  "keywords": [
+    "Origin",
+    "Take Home",
+    "Assignment",
+    "Design System"
+  ],
+  "author": {
+    "name": "Wander Rocha Gomes",
+    "email": "wander.rg@gmail.com",
+    "url": "https://github.com/WanderGomes/take-home-assignment-design-system.git"
+  },
+  "license": "ISC",
+  "description": "Origin - Take Home Assignment Design System",
+  "dependencies": {
+    "css-vars-ponyfill": "^2.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.2",
+    "copyfiles": "^2.3.0",
+    "css-loader": "^3.6.0",
+    "extra-watch-webpack-plugin": "^1.0.3",
+    "file-loader": "^5.1.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "mkdirp": "^1.0.4",
+    "node-sass": "^4.14.1",
+    "node-sass-import": "^2.0.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss-loader": "^3.0.0",
+    "rimraf": "^3.0.1",
+    "sass": "^1.26.11",
+    "sass-lint": "^1.13.1",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-version-file-plugin": "^0.4.0"
+  }
+}

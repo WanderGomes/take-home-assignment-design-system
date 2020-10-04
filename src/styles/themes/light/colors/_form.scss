@@ -1,0 +1,19 @@
+:root {
+    --tk-input-default-color: var(--tk-dark-gray);
+    --tk-input-default-background: var(--tk-white);
+    --tk-input-default-border-color: var(--tk-light-gray);
+
+    --tk-input-hover-background-color: var(--tk-lighter-gray);
+    --tk-input-hover-text-color: var(--tk-dark-gray);
+
+    --tk-input-focus-border-color: var(--tk-primary-dark);
+
+    --tk-placeholder-color: var(--tk-gray);
+
+    --tk-input-icon-color: var(--tk-gray);
+
+    --tk-input-prepend-append-background-color: var(--tk-lighter-gray);
+    --tk-input-prepend-append-border-color: solid 1px var(--tk-light-gray);
+
+    --tk-input-group-background-color: var(--tk-white);
+}

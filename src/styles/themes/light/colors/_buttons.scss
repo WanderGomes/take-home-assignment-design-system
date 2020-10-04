@@ -1,0 +1,22 @@
+:root {
+    --tk-button-color: var(--tk-dark-gray);
+    --tk-button-background-color: var(--tk-lighter-gray);
+
+    --tk-button-blue-color: var(--tk-white);
+    --tk-button-blue-background-color: var(--tk-primary-dark);
+
+    --tk-button-blue-hover-color: var(--tk-white);
+    --tk-button-blue-hover-background-color: var(--tk-primary-hover);
+
+    --tk-button-blue-focus-color: var(--tk-white);
+    --tk-button-blue-focus-background-color: var(--tk-primary-dark);
+
+    --tk-button-blue-active-color: var(--tk-white);
+    --tk-button-blue-active-background-color: var(--tk-primary-press);
+
+    --tk-button-disabled-color: var(--tk-gray);
+
+    --tk-button-disabled-background-color: var(--tk-light-gray);
+
+    --tk-button-disabled-border-color: var(--tk-light-gray);
+}

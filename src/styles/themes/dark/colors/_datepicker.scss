@@ -1,0 +1,35 @@
+html.tk-theme--dark {
+    --tk-datepicker-default-border-color: var(--tk-input-default-border-color);
+
+    --tk-datepicker-focus-border-color: var(--tk-input-focus-border-color);
+
+    --tk-datepicker-hover-background-color: var(--tk-input-hover-background-color);
+
+    --tk-datepicker-default-color: var(--tk-input-default-color);
+
+    --tk-datepicker-hover-text-color: var(--tk-input-hover-text-color);
+
+    --tk-datepicker-icon-color: var(--tk-input-icon-color);
+
+    --tk-datepicker-icon-font-size: var(--tk-bigger-font-size);
+
+    --tk-datepicker-action-hover-color: var(--tk-white);
+
+    --tk-datepicker-action-hover-backgound-color: var(--tk-primary-hover);
+
+    --tk-datepicker-action-focus-color: var(--tk-white);
+
+    --tk-datepicker-action-focus-background-color: var(--tk-primary-dark);
+
+    --tk-datepicker-action-active-color: var(--tk-white);
+
+    --tk-datepicker-active-background-color: var(--tk-primary-press);
+
+    --tk-input-group-background-color: var(--tk-white);
+
+    --tk-datepicker-action-background-color: var(--tk-darker-gray);
+
+    --tk-datepicker-month-color: var(--tk-lighter-gray);
+
+    --tk-datepicker-year-color: var(--tk-light-gray);
+}

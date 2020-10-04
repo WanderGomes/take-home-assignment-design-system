@@ -1,0 +1,6 @@
+@mixin transition($attr: 'all', $time: 0.5s, $timing-function: ease-in-out, $delay: 0s) {
+    -webkit-transition: #{$attr} $time #{$timing-function} $delay;
+    -moz-transition: #{$attr} $time #{$timing-function} $delay;
+    -o-transition: #{$attr} $time #{$timing-function} $delay;
+    transition: #{$attr} $time #{$timing-function} $delay;
+}

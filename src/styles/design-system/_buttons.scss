@@ -1,0 +1,64 @@
+.tk-button {
+    display: inline-block;
+    height: var(--tk-button-height) !important;
+    padding: var(--tk-button-padding);
+    color: var(--tk-button-color);
+    background-color: var(--tk-button-background-color);
+    border: none;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    @include transition("color", .15s, "ease-in-out");
+    @include transition("background-color", .15s, "ease-in-out");
+
+    &--rounded {
+        @include border-radius(var(--tk-button-border-radius));
+    }
+
+    &--blue {
+        color: var(--tk-button-blue-color);
+        background-color: var(--tk-button-blue-background-color);
+
+        &:hover {
+            color: var(--tk-button-blue-hover-color);
+            background-color: var(--tk-button-blue-hover-background-color);
+        }
+
+        &:focus, &.tk-button--focus {
+            color: var(--tk-button-blue-focus-color);
+            background-color: var(--tk-button-blue-focus-background-color);
+        }
+
+        &:not(:disabled):not(.tk-button--disabled) {
+
+            &:active, &.tk-button--active {
+                color: var(--tk-button-blue-active-color);
+                background-color: var(--tk-button-blue-active-background-color);
+            }
+        }
+
+        &:disabled, &.tk-button--disabled {
+            color: var(--tk-button-disabled-color);
+            background-color: var(--tk-button-disabled-background-color);
+            border-color: var(--tk-button-disabled-border-color);
+            opacity: .48;
+            cursor: not-allowed;
+
+            &:hover {
+                color: var(--tk-button-disabled-color);
+                background-color: var(--tk-button-disabled-background-color);
+                border-color: var(--tk-button-disabled-border-color);
+            }
+        }
+    }
+}
