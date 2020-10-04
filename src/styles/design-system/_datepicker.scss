@@ -1,0 +1,183 @@
+.tk-datepicker {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    &__input-group {
+        display: flex;
+        height: var(--tk-input-height);
+        background: var(--tk-input-group-background-color);
+        flex-direction: row;
+        align-items: center;
+        border: solid 1px var(--tk-input-default-border-color);
+        margin-top: var(--tk-half-space);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        outline: none;
+        @include border-radius(var(--tk-half-space));
+
+        &:focus, &:focus-within {
+            border-color: var(--tk-input-focus-border-color);
+            @include transition("border-color", 0.16s, "ease-in-out");
+
+            i {
+                color: var(--tk-input-focus-border-color);
+                @include transition("color", 0.16s, "ease-in-out");
+
+                &::before {
+                    color: var(--tk-input-focus-border-color);
+                    @include transition("color", 0.16s, "ease-in-out");
+                }
+            }
+        }
+
+        &:hover {
+            background: var(--tk-input-hover-background-color);
+        }
+
+        .tk-datepicker__input {
+            height: 100%;
+            flex: 1;
+            border: none;
+        }
+    }
+
+    %datepicker-input-icon {
+        color: var(--tk-datepicker-icon-color);
+        font-size: var(--tk-datepicker-icon-font-size);
+    }
+
+    %datepicker-action {
+        display: flex;
+        height: 100%;
+        width: var(--tk-space-6x);
+        max-width: var(--tk-space-6x);
+        padding: 0;
+        border: none;
+        background: var(--tk-datepicker-action-background-color);
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+        @extend %datepicker-input-icon;
+        @include transition("color", .15s, "ease-in-out");
+        @include transition("background-color", .15s, "ease-in-out");
+
+        i, i::before {
+            @extend %datepicker-input-icon;
+        }
+
+        &:hover {
+            color: var(--tk-datepicker-action-hover-color);
+            background-color: var(--tk-datepicker-action-hover-backgound-color);
+
+            i, i::before {
+                color: var(--tk-datepicker-action-hover-color);
+            }
+        }
+
+        &:focus, &.tk-datepicker--focus {
+            color: var(--tk-datepicker-action-focus-color);
+            background-color: var(--tk-datepicker-action-focus-background-color);
+
+            i, i::before {
+                color: var(--tk-datepicker-action-focus-color);
+            }
+        }
+
+        &:not(:disabled):not(.tk-datepicker--disabled) {
+
+            &:active, &.tk-datepicker--active {
+                color: var(--tk-datepicker-action-active-color);
+                background-color: var(--tk-datepicker-active-background-color);
+
+                i, i::before {
+                    color: var(--tk-datepicker-action-active-color);
+                }
+            }
+        }
+
+        i, i::before {
+            @extend %datepicker-input-icon;
+        }
+    }
+
+    &__preview {
+        @extend %datepicker-action;
+        @include border-top-left-radius(3px);
+        @include border-bottom-left-radius(3px);
+    }
+
+    &__next {
+        @extend %datepicker-action;
+        @include border-top-right-radius(3px);
+        @include border-bottom-right-radius(3px);
+    }
+
+    &__input {
+        display: flex;
+        height: var(--tk-input-height);
+        width: 100%;
+        padding: var(--tk-default-space);
+        color: var(--tk-input-default-color);
+        background: var(--tk-input-default-background);
+        font-size: var(--tk-big-font-size);
+        font-weight: 600;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        border-left: 0;
+        border-right: 0;
+        border-color: var(--tk-input-default-border-color);
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        outline: none;
+
+        &:hover {
+            color: var(--tk-input-hover-text-color);
+            background: var(--tk-input-hover-background-color);
+        }
+
+        &:focus, &:focus-within {
+            border-color: var(--tk-input-focus-border-color);
+            @include transition("border-color", 0.16s, "ease-in-out");
+        }
+    }
+
+    &__month {
+        font-style: normal;
+        font-weight: 600;
+        font-size: var(--tk-font-size-20);
+        color: var(--tk-datepicker-month-color);
+    }
+
+    &__year {
+        font-style: normal;
+        font-weight: normal;
+        font-size: var(--tk-default-font-size);
+        color: var(--tk-datepicker-year-color);
+        margin-top: calc(-1 * var(--tk-half-space));
+    }
+
+    label {
+        color: var(--tk-text-color);
+        font-weight: 500;
+    }
+
+    label + .tk-datepicker__input-group {
+        margin-top: var(--tk-half-space);
+    }
+}

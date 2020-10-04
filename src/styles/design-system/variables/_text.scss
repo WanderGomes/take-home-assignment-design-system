@@ -1,0 +1,21 @@
+:root {
+    --tk-font-family: 'Work Sans', sans-serif;
+
+    --tk-default-letter-spacing: .03em;
+
+    --tk-font-size-12: 1.2rem;
+    --tk-font-size-14: 1.4rem;
+    --tk-font-size-16: 1.6rem;
+    --tk-font-size-18: 1.8rem;
+    --tk-font-size-20: 2rem;
+    --tk-font-size-24: 2.4rem;
+    --tk-font-size-26: 2.6rem;
+    --tk-font-size-32: 3.2rem;
+    --tk-font-size-36: 3.6rem;
+    --tk-font-size-40: 4rem;
+
+    --tk-default-font-size: var(--tk-font-size-16);
+    --tk-big-font-size: var(--tk-font-size-24);
+    --tk-bigger-font-size: var(--tk-font-size-32);
+    --tk-bigger-font-size-2: var(--tk-font-size-36);
+}

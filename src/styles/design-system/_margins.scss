@@ -1,0 +1,30 @@
+@each $size in $space-sizes {
+
+    .tk-mt {
+
+        &--#{$size} {
+            margin-top: #{$size}px !important;
+        }
+    }
+
+    .tk-mb {
+
+        &--#{$size} {
+            margin-bottom: #{$size}px !important;
+        }
+    }
+
+    .tk-ml {
+
+        &--#{$size} {
+            margin-left: #{$size}px !important;
+        }
+    }
+
+    .tk-mr {
+
+        &--#{$size} {
+            margin-right: #{$size}px !important;
+        }
+    }
+}

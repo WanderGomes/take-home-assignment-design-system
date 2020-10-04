@@ -1,0 +1,25 @@
+@mixin border-radius($width: 4px) {
+    -webkit-border-radius: $width !important;
+    -moz-border-radius: $width !important;
+    border-radius: $width !important;
+}
+
+@mixin border-top-left-radius($width: 4px) {
+    -webkit-border-top-left-radius: $width !important;
+    border-top-left-radius: $width !important;
+}
+
+@mixin border-top-right-radius($width: 4px) {
+    -webkit-border-top-right-radius: $width !important;
+    border-top-right-radius: $width !important;
+}
+
+@mixin border-bottom-left-radius($width: 4px) {
+    -webkit-border-bottom-left-radius: $width !important;
+    border-bottom-left-radius: $width !important;
+}
+
+@mixin border-bottom-right-radius($width: 4px) {
+    -webkit-border-bottom-right-radius: $width !important;
+    border-bottom-right-radius: $width !important;
+}
