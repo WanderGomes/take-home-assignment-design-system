@@ -1,0 +1,11 @@
+:root {
+    --tk-default-space: 8px;
+    --tk-half-space: calc(var(--tk-default-space) / 2);
+    --tk-space-0x: 0;
+}
+
+@each $size in $space-sizes {
+    :root {
+        --tk-space-#{$size}x: calc(var(--tk-default-space) * #{$size});
+    }
+}

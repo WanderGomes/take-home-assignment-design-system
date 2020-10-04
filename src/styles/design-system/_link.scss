@@ -1,0 +1,20 @@
+.tk-link {
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &--default {
+        color: var(--tk-link-default-color);
+    }
+
+    &--primary {
+        color: var(--tk-link-primary-color);
+    }
+
+    &--small {
+        font-size: var(--tk-link-small-font);
+    }
+}

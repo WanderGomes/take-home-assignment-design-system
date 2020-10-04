@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+
+    &, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        color: var(--tk-text-color);
+        font-family: var(--tk-font-family);
+        font-size: var(--tk-default-font-size);
+        font-weight: normal;
+        text-rendering: optimizelegibility;
+        letter-spacing: var(--tk-default-letter-spacing);
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
