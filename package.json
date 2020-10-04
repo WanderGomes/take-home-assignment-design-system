@@ -23,7 +23,12 @@
     "type": "git",
     "url": "https://github.com/WanderGomes/take-home-assignment-design-system.git"
   },
-  "keywords": ["Origin", "Take Home", "Assignment", "Design System"],
+  "keywords": [
+    "Origin",
+    "Take Home",
+    "Assignment",
+    "Design System"
+  ],
   "author": {
     "name": "Wander Rocha Gomes",
     "email": "wander.rg@gmail.com",
