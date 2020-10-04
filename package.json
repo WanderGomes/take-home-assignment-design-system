@@ -1,5 +1,5 @@
 {
-  "name": "@wander.gomes/take-home-assignment-design-system",
+  "name": "take-home-assignment-design-system",
   "version": "1.0.0",
   "files": [
     "dist/**/*"
