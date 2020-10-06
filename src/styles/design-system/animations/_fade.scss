@@ -96,17 +96,17 @@
 .tk-animation {
 
     &--fade-in {
-        -webkit-animation: FADE-IN .5s ease-in-out; /* Safari 4+ */
-        -moz-animation: FADE-IN .5s ease-in-out; /* Fx 5+ */
-        -o-animation: FADE-IN .5s ease-in-out; /* Opera 12+ */
-        animation: FADE-IN .5s ease-in-out; /* IE 10+, Fx 29+ */
+        -webkit-animation: FADE-IN 1s ease-in-out; /* Safari 4+ */
+        -moz-animation: FADE-IN 1s ease-in-out; /* Fx 5+ */
+        -o-animation: FADE-IN 1s ease-in-out; /* Opera 12+ */
+        animation: FADE-IN 1s ease-in-out; /* IE 10+, Fx 29+ */
     }
 
     &--fade-out {
-        -webkit-animation: FADE-OUT .5s ease-in-out; /* Safari 4+ */
-        -moz-animation: FADE-OUT .5s ease-in-out; /* Fx 5+ */
-        -o-animation: FADE-OUT .5s ease-in-out; /* Opera 12+ */
-        animation: FADE-OUT .5s ease-in-out; /* IE 10+, Fx 29+ */
+        -webkit-animation: FADE-OUT 1s ease-in-out; /* Safari 4+ */
+        -moz-animation: FADE-OUT 1s ease-in-out; /* Fx 5+ */
+        -o-animation: FADE-OUT 1s ease-in-out; /* Opera 12+ */
+        animation: FADE-OUT 1s ease-in-out; /* IE 10+, Fx 29+ */
     }
 }
 
