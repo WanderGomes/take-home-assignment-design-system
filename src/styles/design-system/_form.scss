@@ -51,7 +51,7 @@
         display: flex;
         height: 100%;
         width: var(--tk-space-7x);
-        padding: 0;
+        padding: 0 var(--tk-space-2x);
         background: var(--tk-input-prepend-append-background-color);
         justify-content: center;
         align-items: center;
