@@ -1,6 +1,7 @@
 {
   "name": "take-home-assignment-design-system",
   "version": "1.1.1",
+  "description": "Origin - Take Home Assignment Design System",
   "files": [
     "dist/**/*"
   ],
@@ -35,7 +36,6 @@
     "url": "https://github.com/WanderGomes/take-home-assignment-design-system.git"
   },
   "license": "ISC",
-  "description": "Origin - Take Home Assignment Design System",
   "dependencies": {
     "css-vars-ponyfill": "^2.3.2"
   },
