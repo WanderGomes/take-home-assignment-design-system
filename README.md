@@ -1,10 +1,9 @@
-# TakeHomeAssigmentDesignSystem
+# Take Home Assignment DesignSystem
 
 ## Prerequisites
 
 - [Node](https://nodejs.org/en/)
 - [NPM](https://www.npmjs.com/)
-- [Angular CLI](https://github.com/angular/angular-cli)
 
 ## Development server
 
@@ -27,6 +26,6 @@ Import in the main style file of your application these files `dist/themes/light
 ## Doubts or Suggestions
 
 For questions or suggestions about the project, send me an email or send me a message on Whatsapp or on Telegram.
-- [wander.rg@gmail.com](mailto: wander.rg@gmail.com)
+- wander.rg@gmail.com
 - [whatsapp](https://wa.me/+5561993398992)
 - [telegram](https://t.me/wandergomes)
