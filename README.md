@@ -1,4 +1,4 @@
-# Take Home Assignment DesignSystem
+# Take Home Assignment Design System
 
 ## Prerequisites
 
