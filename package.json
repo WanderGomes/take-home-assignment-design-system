@@ -1,6 +1,6 @@
 {
   "name": "take-home-assignment-design-system",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Origin - Take Home Assignment Design System",
   "files": [
     "dist/**/*"
