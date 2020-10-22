@@ -1,3 +1,14 @@
+.tk-container {
+    display: flex;
+    flex-direction: column;
+    width: var(--tk-container-width);
+    margin: 0 auto;
+
+    &--horizontal {
+        flex-direction: row;
+    }
+}
+
 .tk-row {
     display: flex;
     -ms-flex-wrap: wrap;
@@ -35,4 +46,12 @@
     .tk-hide--xs {
         display: none;
     }
+}
+
+@media (min-width: 680px) and (max-width: 991px) {
+
+}
+
+@media (min-width: 992px) {
+
 }
